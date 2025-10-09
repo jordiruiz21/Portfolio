@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Proyecto | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Header -->
+  <header class="bg-gray-800 py-4">
+    <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Portfolio de Jordi</h1>
+      <a href="index.html" class="text-indigo-400 hover:underline">← Volver</a>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <!-- Título -->
+    <h2 class="text-4xl font-extrabold mb-6">PeliAPI</h2>
+
+    <!-- Imagen -->
+    <div class="mb-6">
+      <img id="mainImage" src="img/landing-peli.jpg" alt="Vista principal" 
+           class="w-full rounded-lg shadow-lg object-cover h-[500px]">
+    </div>
+
+    <!-- Miniaturas -->
+    <div class="flex gap-4 justify-center">
+      <img src="img/landing-peli.jpg" alt="miniatura 1" 
+           class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-indigo-600">
+      <img src="img/favoritos-peli.jpg" alt="miniatura 2" 
+           class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600">
+      
+    </div> 
+
+    <!-- Descripción -->
+    <p class="text-lg text-gray-300 mb-8">
+        Mis Pelis es una aplicación web desarrollada con React y Bootstrap que permite a los usuarios explorar y gestionar su propia colección de películas favoritas.
+        La página principal muestra una lista de películas populares obtenidas mediante una API externa, con la posibilidad de realizar búsquedas personalizadas por título.
+
+        Este proyecto me sirvió para poner en práctica lo sabido en cuanto al uso de API´s y React
+    </p>
+
+    <!-- Tecnologías -->
+    <div class="mb-8">
+      <h3 class="text-2xl font-bold mb-4">Tecnologías utilizadas</h3>
+      <div class="flex flex-wrap gap-4">
+        <span class="px-4 py-2 bg-gray-800 rounded-lg">HTML</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-lg">CSS</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-lg">JavaScript</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-lg">React</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-lg">Bootstrap</span>
+
+      </div>
+    </div>
+
+    <!-- Botones -->
+    <div class="flex gap-4">
+      <a href="https://68e63942b569b93f90362a60--peliapi21.netlify.app/ " target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded transition">
+        Ver Demo
+      </a>
+      <a href="https://github.com/jordiruiz21/PeliAPI" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold px-6 py-3 rounded transition">
+        Ver Código
+      </a>
+    </div>
+  </main>
+</body>
+<script>
+    const mainImage = document.getElementById("mainImage");
+    const thumbnails = document.querySelectorAll(".thumbnail");
+
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener("click", () => {
+        // Cambiar la im agen principal
+        mainImage.src = thumb.src;
+
+        // Quitar borde a todas
+        thumbnails.forEach(t => t.classList.remove("border-indigo-600"));
+        thumbnails.forEach(t => t.classList.add("border-transparent"));
+
+        // Añadir borde a la seleccionada
+        thumb.classList.remove("border-transparent");
+        thumb.classList.add("border-indigo-600");
+      });
+    });
+</script>
+</html>

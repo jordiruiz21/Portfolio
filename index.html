@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+
+
+  <!-- INICIO -->
+  <section id="inicio" class="py-20">
+  <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
+
+    <!-- Columna Izquierda (Texto + Botón) -->
+    <div class="pl-10">
+      <a href="docs/CV-JordiRuiz.pdf" download 
+         class="inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded transition mb-6">
+        Descargar CV
+      </a>
+
+      <h2 class="text-4xl font-extrabold mb-4">¡Hola! Soy Jordi Ruiz</h2>
+      <p class="text-xl text-gray-400">Desarrollador Web Junior | Frontend & Backend</p>
+    </div>
+
+    <!-- Columna Derecha (Foto) -->
+    <div class="flex justify-center">
+      <img src="img/foto-carnet.jpeg" alt="Foto de Jordi Ruiz" 
+           class="w-64 h-64 object-cover rounded-full border-4 border-indigo-600 shadow-lg">
+    </div>
+
+  </div>
+</section>
+
+
+  
+  <!-- SOBRE MÍ -->
+  <section id="sobremi" class="py-16 px-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-semibold mb-6">Sobre mí</h2>
+    <p id="typing" class="text-gray-300 leading-relaxed">
+      
+    </p>
+  </section>
+<!-- TECNOLOGÍAS -->
+<section id="tecnologias" class="py-16 px-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-semibold mb-12 text-center">Tecnologías</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+    <!-- Frontend -->
+    <div class="bg-gray-800 p-8 rounded-xl shadow hover:shadow-2xl transition">
+      <h3 class="text-2xl font-bold mb-6 text-indigo-400 text-center">Frontend</h3>
+      <div class="flex flex-wrap justify-center gap-6">
+        <!-- Logo + nombre -->
+        <div class="flex flex-col items-center">
+          <img src="img/html-5-svgrepo-com.svg" alt="HTML5" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">HTML5</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="img/css-3-svgrepo-com.svg" alt="CSS3" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">CSS3</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="img/javascript-svgrepo-com.svg" alt="JavaScript" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">JavaScript</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="img/react-svgrepo-com.svg" alt="React" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">React</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend -->
+    <div class="bg-gray-800 p-8 rounded-xl shadow hover:shadow-2xl transition">
+      <h3 class="text-2xl font-bold mb-6 text-indigo-400 text-center">Backend</h3>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="flex flex-col items-center">
+          <img src="img/php-svgrepo-com.svg" alt="Node.js" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">PHP</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="img/python-svgrepo-com.svg" alt="Python" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">Python</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="img/django-icon-svgrepo-com.svg" alt="Django" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">Django</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="img/database-svgrepo-com.svg" alt="MySQL" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">DataBases</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Herramientas -->
+    <div class="bg-gray-800 p-8 rounded-xl shadow hover:shadow-2xl transition">
+      <h3 class="text-2xl font-bold mb-6 text-indigo-400 text-center">Herramientas</h3>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="flex flex-col items-center">
+          <img src="img/git-svgrepo-com.svg" alt="Git" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">Git</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="img/github-142-svgrepo-com.svg" alt="GitHub" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">GitHub</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="img/wordpress-color-svgrepo-com.svg" alt="VSCode" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">Wordpress</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="img/docker-svgrepo-com.svg" alt="Docker" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">Docker</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diseño -->
+    <div class="bg-gray-800 p-8 rounded-xl shadow hover:shadow-2xl transition">
+      <h3 class="text-2xl font-bold mb-6 text-indigo-400 text-center">Diseño</h3>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="flex flex-col items-center">
+          <img src="img/figma-svgrepo-com.svg" alt="Figma" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">Figma</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="img/canva-svgrepo-com.svg" alt="Canva" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">Canva</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="img/adobe-photoshop-svgrepo-com.svg" alt="UI/UX" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">Photoshop</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="img/adobe-illustrator-svgrepo-com.svg" alt="Responsive Design" class="w-12 h-12 mb-1">
+          <span class="text-gray-300 text-sm">Illustrator</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="py-16 px-6 bg-gray-800">
+    <h2 class="text-3xl font-semibold mb-8 text-center">Proyectos</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Proyecto 1 -->
+      <div class="bg-gray-700 p-4 rounded-xl shadow hover:shadow-xl transition">
+        <img src="img/landing.jpg" alt="Proyecto 1" class="mb-4 rounded">
+        <h3 class="text-xl font-bold mb-2">Fitcore</h3>
+        <p class="text-gray-300 text-sm mb-3">Plataforma web desarrollada en Django para la gestión de un gimnasio, con registro de usuarios, rutinas de entrenamiento y seguimiento de progreso.</p>
+        <a href="proyecto.html" class="text-indigo-400 hover:underline mr-3">Detalle</a>
+        
+      </div>
+      <!-- Proyecto 2 -->
+      <div class="bg-gray-700 p-4 rounded-xl shadow hover:shadow-xl transition">
+        <img src="img/landing-peli.jpg" alt="Proyecto 1" class="mb-4 rounded">
+        <h3 class="text-xl font-bold mb-2">PeliAPI</h3>
+        <p class="text-gray-300 text-sm mb-3">Página web desarrollada en React para practicar el uso de APIs, sirve para buscar películas y añadirlas a favoritos.</p>
+        <a href="proyecto2.html" class="text-indigo-400 hover:underline mr-3">Detalle</a>
+        
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 border-t border-gray-700 text-sm text-gray-500">
+    © 2025 Jordi Ruiz — Portfolio Personal
+  </footer>
+
+</body>
+<script src="script.js"></script>
+</html>
