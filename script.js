@@ -4,7 +4,7 @@
     if (i < text.length) {
       document.getElementById("typing").innerHTML += text.charAt(i);
       i++;
-      setTimeout(typeWriter, 20);
+      setTimeout(typeWriter, 12);
     }
   }
   typeWriter();

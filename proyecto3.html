@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Proyecto | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Header -->
+  <header class="bg-gray-800 py-4">
+    <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Portfolio de Jordi</h1>
+      <a href="index.html" class="text-indigo-400 hover:underline">← Volver</a>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="max-w-5xl mx-auto px-6 py-12">
+    <!-- Título -->
+    <h2 class="text-4xl font-extrabold mb-6">Tritón</h2>
+
+    <!-- Imagen -->
+    <div class="mb-6 ">
+      <img id="mainImage" src="img/triton-logo.jpg" alt="Vista principal" 
+           class="items-center rounded-lg shadow-lg object-cover h-[500px]">
+    </div>
+
+    <!-- Miniaturas -->
+    <div class="flex gap-4 justify-center">
+      <img src="img/triton-logo.jpg" alt="miniatura 1" 
+           class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-indigo-600">
+      <img src="img/catalogo-triton.jpg" alt="miniatura 2" 
+           class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600">
+        <img src="img/triptico-triton.jpg" alt="miniatura 2" 
+            class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600">
+        <img src="img/tarjetavisita-triton.jpg" alt="miniatura 2" 
+            class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600">
+        <img src="img/carpeta-triton.jpg" alt="miniatura 2" 
+            class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600">
+        <img src="img/Inicio Desktop.png" alt="miniatura 2" 
+            class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600">
+        <img src="img/jordiruizroman.es_about_(Nest Hub Max).png" alt="miniatura 2" 
+            class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600">
+        <img src="img/jordiruizroman.es_contact_(Nest Hub Max).png" alt="miniatura 2" 
+            class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600">
+        <img src="img/jordiruizroman.es_services_(Nest Hub Max) (1).png" alt="miniatura 2" 
+            class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600">
+        
+      
+    </div> 
+
+    <!-- Descripción -->
+    <p class="text-lg text-gray-300 my-8">
+        En este proyecto creé una identidad de marca desde cero, con la única premisa de que fuera una empresa de deportes acuáticos. Cree un manual de identidad corporativa con el diseño del logo y todas sus versiones, además de el uso de la marca en diferentes campos como catálogos, trípticos, tarjetas de visita, etc...
+        
+    </p>
+    <p class="text-lg text-gray-300 mb-8">
+        También creé una pagina web con toda la información de la empresa utilizando Wordpress, ya que mis conocimientos en programación en ese entonces eran limitados.
+    </p>
+
+    <!-- Tecnologías -->
+    <div class="mb-8">
+      <h3 class="text-2xl font-bold mb-4">Tecnologías utilizadas</h3>
+      <div class="flex flex-wrap gap-4">
+        <span class="px-4 py-2 bg-gray-800 rounded-lg">Photoshop</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-lg">Illustrator</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-lg">InDesign</span>
+        <span class="px-4 py-2 bg-gray-800 rounded-lg">Wordpress</span>
+
+      </div>
+    </div>
+
+    <!-- Botones -->
+    <div class="flex gap-4">
+      <a href="docs/Manual_Tritón.pdf" download target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded transition">
+        Descargar manual de identidad
+      </a>
+      
+    </div>
+  </main>
+</body>
+<script>
+    const mainImage = document.getElementById("mainImage");
+    const thumbnails = document.querySelectorAll(".thumbnail");
+
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener("click", () => {
+        // Cambiar la im agen principal
+        mainImage.src = thumb.src;
+
+        // Quitar borde a todas
+        thumbnails.forEach(t => t.classList.remove("border-indigo-600"));
+        thumbnails.forEach(t => t.classList.add("border-transparent"));
+
+        // Añadir borde a la seleccionada
+        thumb.classList.remove("border-transparent");
+        thumb.classList.add("border-indigo-600");
+      });
+    });
+</script>
+</html>
