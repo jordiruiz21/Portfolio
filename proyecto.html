@@ -19,32 +19,33 @@
   <!-- Contenido principal -->
   <main class="max-w-5xl mx-auto px-6 py-12">
     <!-- Título -->
-    <h2 class="text-4xl font-extrabold mb-6">FitCore</h2>
+    <h2 class="text-4xl font-extrabold mb-6 text-center md:text-left">FitCore</h2>
 
-    <!-- Imagen -->
-    <div class="mb-6">
+    <!-- Imagen principal -->
+    <div class="mb-6 flex justify-center">
       <img id="mainImage" src="img/landing.jpg" alt="Vista principal" 
-           class="w-full rounded-lg shadow-lg object-cover h-[500px]">
+           class="w-full md:w-[800px] h-[250px] sm:h-[400px] md:h-[500px] object-contain rounded-lg shadow-lg transition-all duration-300">
     </div>
 
     <!-- Miniaturas -->
-    <div class="flex gap-4 justify-center">
+    <div class="flex flex-wrap justify-center gap-3">
       <img src="img/landing.jpg" alt="miniatura 1" 
-           class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-indigo-600">
+           class="thumbnail w-20 h-16 sm:w-24 sm:h-20 object-cover rounded cursor-pointer border-2 border-indigo-600 transition-all">
       <img src="img/inicio-sesion.jpg" alt="miniatura 2" 
-           class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600">
+           class="thumbnail w-20 h-16 sm:w-24 sm:h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600 transition-all">
       <img src="img/cuerpo.jpg" alt="miniatura 3" 
-           class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600">
+           class="thumbnail w-20 h-16 sm:w-24 sm:h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600 transition-all">
       <img src="img/regsitro.jpg" alt="miniatura 4" 
-           class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600">
-        <img src="img/estadisticas.jpg" alt="miniatura 4" 
-           class="thumbnail w-24 h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600">
+           class="thumbnail w-20 h-16 sm:w-24 sm:h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600 transition-all">
+      <img src="img/estadisticas.jpg" alt="miniatura 5" 
+           class="thumbnail w-20 h-16 sm:w-24 sm:h-20 object-cover rounded cursor-pointer border-2 border-transparent hover:border-indigo-600 transition-all">
     </div> 
 
     <!-- Descripción -->
-    <p class="text-lg text-gray-300 my-8">
-     Plataforma web desarrollada en Django para la gestión de un gimnasio, con registro de usuarios, rutinas de entrenamiento y seguimiento de progreso mediante gráficos. Permite crear, editar y eliminar ejercicios, músculos y centros. 
-     Fue un reto en el que aprendí mucho sobre frontend y backend.
+    <p class="text-lg text-gray-300 my-8 leading-relaxed">
+      <strong>FitCore</strong> es una plataforma web desarrollada con Django para la gestión de un gimnasio, con registro de usuarios, rutinas de entrenamiento y seguimiento del progreso mediante gráficos.  
+      Permite crear, editar y eliminar ejercicios, músculos y centros.  
+      Fue un proyecto en el que aprendí mucho tanto del frontend como del backend.
     </p>
 
     <!-- Tecnologías -->
@@ -56,28 +57,29 @@
         <span class="px-4 py-2 bg-gray-800 rounded-lg">JavaScript</span>
         <span class="px-4 py-2 bg-gray-800 rounded-lg">Django</span>
         <span class="px-4 py-2 bg-gray-800 rounded-lg">Python</span>
-
       </div>
     </div>
 
     <!-- Botones -->
-    <div class="flex gap-4">
-      <a href="https://fitcore.onrender.com/ " target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded transition">
+    <div class="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
+      <a href="https://fitcore.onrender.com/" target="_blank" 
+         class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-6 py-3 rounded transition text-center">
         Ver Demo
       </a>
-      <a href="https://github.com/jordiruiz21/ProyectoDjango" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-semibold px-6 py-3 rounded transition">
+      <a href="https://github.com/jordiruiz21/ProyectoDjango" target="_blank" 
+         class="bg-gray-700 hover:bg-gray-600 text-white font-semibold px-6 py-3 rounded transition text-center">
         Ver Código
       </a>
     </div>
   </main>
-</body>
-<script>
+
+  <script>
     const mainImage = document.getElementById("mainImage");
     const thumbnails = document.querySelectorAll(".thumbnail");
 
     thumbnails.forEach(thumb => {
       thumb.addEventListener("click", () => {
-        // Cambiar la im agen principal
+        // Cambiar la imagen principal
         mainImage.src = thumb.src;
 
         // Quitar borde a todas
@@ -89,5 +91,7 @@
         thumb.classList.add("border-indigo-600");
       });
     });
-</script>
+  </script>
+
+</body>
 </html>
