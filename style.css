@@ -1,0 +1,97 @@
+/* Estilos base para el efecto de escritura */
+    .typing-cursor::after {
+      content: '|';
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    /* Fondo animado */
+    .gradient-bg {
+      background: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #0f172a 100%);
+    }
+
+    /* Scrollbar personalizada */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #4f46e5;
+      border-radius: 4px;
+    }
+
+
+
+
+.div-1 {
+    position: relative;
+    background-image: url("img/gym1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;              /* Activa Flexbox */
+    justify-content: center;    /* Centra horizontalmente */
+    align-items: center
+}
+
+.div-1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45); /* Ajusta opacidad si quieres más oscuro */
+    border-radius: 15px;
+    z-index: 0;
+}
+.div-1 > img {
+    position: relative;
+    z-index: 1; /* ADELANTE */
+    padding: 0 30px;
+   
+}
+.div-2{
+    background-image: url("img/fondo-degradado.svg") ;
+        background-size: cover ;
+        background-position: center;
+}
+
+.div-3 {
+    background-color: beige;
+    background-position: center;
+    background-size: cover;
+    color: black;
+    display: flex;                  
+    justify-content: center;        
+    align-items: center;            
+}
+
+.inner {
+    display: flex;
+    gap: 10px;                      
+    align-items: center;            
+    font-size: 2rem;                
+    font-weight: 800;
+    font-family: Roboto;
+}
+
+.logo-proyectos {
+    max-width: 50px;                /* Controla tamaño del logo */
+}
+
+.div-4{
+    background-color: beige;
+background-position: center;
+    background-size: cover;
+    color: black;
+    display: flex;                  
+    justify-content: center;        
+    align-items: center; 
+}
+
+.container-padre > div{
+    border-radius: 15px;
+}

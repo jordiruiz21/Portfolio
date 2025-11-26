@@ -1,27 +1,43 @@
+ // 1. EFECTO DE ESCRITURA (Typewriter)
+    const textToType = "Soy un desarrollador web junior apasionado por crear experiencias web modernas y funcionales. Me he graduado en Desarrollo de Aplicaciones Web y en Diseño y Edición de Publicaciones Impresas y Multimedia.\n He trabajado con tecnologías como HTML, CSS, JavaScript, React y Django, entre otras. Actualmente estoy buscando una oportunidad para aplicar mis conocimientos y seguir aprendiendo.";
+    const typingElement = document.getElementById('typing-container');
+    let i = 0;
 
-
-
-  const text1 = "Soy un desarrollador web junior apasionado por crear experiencias web modernas y funcionales. Me he graduado en Desarrollo de Aplicaciones Web y en Diseño y Edición de Publicaciones Impresas y Multimedia.";
-  const text2 = "He trabajado con tecnologías como HTML, CSS, JavaScript, React y Django, entre otras. Actualmente estoy buscando una oportunidad para aplicar mis conocimientos y seguir aprendiendo.";
-
-  let i = 0;
-  function typeWriter1() {
-    if (i < text1.length) {
-      document.getElementById("typing1").innerHTML += text1.charAt(i);
-      i++;
-      setTimeout(typeWriter1, 12);
-    } else {
-      i = 0; // reiniciamos el contador
-      setTimeout(typeWriter2, 400); // espera un poco antes del segundo párrafo
+    function typeWriter() {
+      if (i < textToType.length) {
+        typingElement.innerHTML += textToType.charAt(i);
+        i++;
+        setTimeout(typeWriter, 30); // Velocidad de escritura
+      } else {
+        // Opcional: Eliminar cursor al finalizar
+        // typingElement.classList.remove('typing-cursor');
+      }
     }
-  }
 
-  function typeWriter2() {
-    if (i < text2.length) {
-      document.getElementById("typing2").innerHTML += text2.charAt(i);
-      i++;
-      setTimeout(typeWriter2, 12);
-    }
-  }
+    // Iniciar cuando el elemento es visible (Intersection Observer)
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          typeWriter();
+          observer.disconnect(); // Solo ejecutar una vez
+        }
+      });
+    });
+    observer.observe(document.getElementById('sobremi'));
 
-  typeWriter1();
+
+    // 2. EFECTO SPOTLIGHT EN LAS CARDS
+    // Este script hace que el borde brillante siga al ratón dentro del contenedor
+    const cardsContainer = document.getElementById("cards-container");
+    const cards = document.querySelectorAll(".card");
+
+    cardsContainer.onmousemove = e => {
+      for(const card of cards) {
+        const rect = card.getBoundingClientRect(),
+              x = e.clientX - rect.left,
+              y = e.clientY - rect.top;
+
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+      };
+    };
